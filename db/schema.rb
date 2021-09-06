@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_09_05_232930) do
+ActiveRecord::Schema.define(version: 2021_09_06_000532) do
 
   create_table "planets", force: :cascade do |t|
     t.string "name"
@@ -22,6 +22,24 @@ ActiveRecord::Schema.define(version: 2021_09_05_232930) do
     t.string "terrain"
     t.string "surface_water"
     t.string "population"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "starships", force: :cascade do |t|
+    t.string "name"
+    t.string "model"
+    t.string "manufacturer"
+    t.string "cost_in_credits"
+    t.string "length"
+    t.string "max_atmosphering_speed"
+    t.string "crew"
+    t.string "passengers"
+    t.string "cargo_capacity"
+    t.string "consumables"
+    t.string "hyperdrive_rating"
+    t.string "MGLT"
+    t.string "starship_class"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
