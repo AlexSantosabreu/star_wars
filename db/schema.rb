@@ -10,7 +10,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_09_06_020837) do
+ActiveRecord::Schema.define(version: 2021_09_07_175028) do
+
+  create_table "people", force: :cascade do |t|
+    t.string "name"
+    t.string "height"
+    t.string "mass"
+    t.string "hair_color"
+    t.string "skin_color"
+    t.string "eye_color"
+    t.string "birth_year"
+    t.string "gender"
+    t.integer "planet_id"
+    t.integer "specie_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
 
   create_table "planets", force: :cascade do |t|
     t.string "name"
