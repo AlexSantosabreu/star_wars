@@ -8,3 +8,4 @@
 #
 
 Rake::Task['db:fetch_vehicles'].invoke
+Rake::Task['db:fetch_planets'].invoke
