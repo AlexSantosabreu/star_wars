@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_09_07_175028) do
+ActiveRecord::Schema.define(version: 2021_09_09_135846) do
 
   create_table "people", force: :cascade do |t|
     t.string "name"
@@ -25,6 +25,15 @@ ActiveRecord::Schema.define(version: 2021_09_07_175028) do
     t.integer "specie_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "person_vehicles", force: :cascade do |t|
+    t.integer "person_id", null: false
+    t.integer "vehicle_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["person_id"], name: "index_person_vehicles_on_person_id"
+    t.index ["vehicle_id"], name: "index_person_vehicles_on_vehicle_id"
   end
 
   create_table "planets", force: :cascade do |t|
@@ -90,4 +99,6 @@ ActiveRecord::Schema.define(version: 2021_09_07_175028) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  add_foreign_key "person_vehicles", "people"
+  add_foreign_key "person_vehicles", "vehicles"
 end
