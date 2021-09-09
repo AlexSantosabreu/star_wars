@@ -8,5 +8,7 @@ RSpec.describe Person, type: :model do
   describe 'associations' do
     it { is_expected.to have_many(:person_vehicles) }
     it { is_expected.to have_many(:vehicles).through(:person_vehicles) }
+    it { is_expected.to have_many(:person_starships) }
+    it { is_expected.to have_many(:starships).through(:person_starships) }
   end
 end
