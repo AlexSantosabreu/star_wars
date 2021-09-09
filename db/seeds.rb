@@ -11,3 +11,4 @@ Rake::Task['db:fetch_vehicles'].invoke
 Rake::Task['db:fetch_planets'].invoke
 Rake::Task['db:fetch_starships'].invoke
 Rake::Task['db:fetch_species'].invoke
+Rake::Task['db:fetch_person'].invoke
