@@ -1,7 +1,7 @@
 namespace :db do
   desc "get person"
   task fetch_person: :environment do
-    url = 'https://swapi.dev/api/person/'
+    url = 'https://swapi.dev/api/people/'
     begin
       p 'Fetch person'
       Person::PersonManager.new(url).call
